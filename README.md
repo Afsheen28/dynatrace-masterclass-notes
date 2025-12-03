@@ -131,3 +131,38 @@
   * Agent Deployment: Ensure the Dynatrace OneAgent is correctly deployed and running on the host.
   * Firewall Settings: Check firewall or security software to ensure there are no blocks preventing data communication.
   * Network Connectivity: Confirm that there is active network connectivity on the machine.
+
+## Section Four: Cloud Automation
+
+### Cloud Automation Intro
+* Various cloud platforms available, including Kubernetes, Cloud Foundry, Amazon, Azure, Google Cloud Platform (GCP), and VMware. Understanding these options helps in selecting the right cloud environment for automation.
+* This component is crucial for monitoring applications across different services such as frontend (web/mobile), databases, and distributed traces. The section emphasizes understanding user interactions with applications to improve experiences.
+* The course will delve into security measures and analytics, process automation to identify vulnerabilities, and protection within your applications.
+* This aspect focuses on analyzing user interactions to enhance digital engagement with the application, emphasizing the importance of user experience.
+* Cloud Automation is positioned to provide insights into releases, service level objectives, and how to effectively use Dynatrace in a cloud setting. The demo mode activated by Dynatrace allows users to see the functionalities without a step-by-step implementation.
+
+### Releases
+* Dynatrace provides a built-in release analysis solution that allows you to track and validate software releases throughout your DevOps pipeline. This includes understanding the stages of the different deployed versions, identifying known bugs, and assessing risks associated with each release.
+* The release inventory feature displays all detected releases, grouped by release and build versions, stages, and products. Each entry represents a process, and you'll find valuable insights such as the latest validation results irrespective of the time frame selected.
+* When examining a specific release, you will see essential information including the release name, version, stage, product name, and associated technologies. It also shows the number of deployments, traffic routed to the release, and any potential third-party vulnerabilities that are important for making informed decisions about deploying the release.
+* This feature lists the validations associated with the selected release, ensuring that you can track how each release is performing compared to past versions. You can also see related events, such as process restarts.
+
+### Service-Level Objectives
+* SLOs are measurable goals that define the expected performance and reliability of a service. They are critical for managing user expectations and maintaining service quality.
+* You can define SLOs based on various metrics such as response time, error rates, availability, and throughput. By establishing clear metrics, you can ensure that your applications meet predefined performance standards.
+* Dynatrace enables real-time monitoring of SLOs, allowing you to track whether your services meet the established objectives. If an SLO is breached, alerts can be configured to notify you of potential issues that could affect users.
+* When deploying new software releases, Dynatrace allows you to assess how the changes impact your SLOs. This is essential for understanding if a new version improves or deteriorates performance compared to prior versions.
+* By analyzing the data collected against your SLOs, you can identify trends and make data-driven decisions to enhance application performance and user satisfaction over time.
+* SLOs can be applied in various scenarios, such as monitoring customer-facing applications or backend services, aligning operations with business goals, and ensuring that critical services remain available during peak times.
+
+### Creating a new SLO
+* Start by navigating to the service level objectives section in Dynatrace. Click on "Create New SLO" which is usually located at the top right corner of the page.
+* You have several options to choose from based on what aspect you want to measure:
+  * Service Level Availability: Measured by dividing the number of successful service codes by the total number of service codes.
+  * Service Method Availability: Measured by dividing the successful key requests by the total key requests for that service.
+  * Service Performance: This is a metric expression that represents the ratio between "good minutes" (where the response latency is below a certain threshold) and total minutes.
+* For monitoring client-side objectives, you can set an SLO for user experience, which reflects the percentage of users who report satisfaction with the service.
+* Once you've selected the desired SLO type, you'll need to define specific service level indicators (SLIs) that will be used to measure the success of the service. You'll also specify targets and the evaluation period for assessing performance.
+* After providing all necessary details, save your new SLO. This will allow Dynatrace to begin monitoring the defined objectives and alert you if the service performance does not meet the established targets.
+
+
